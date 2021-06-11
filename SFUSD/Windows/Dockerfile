@@ -20,7 +20,6 @@ RUN apt-get update && apt-get -y install \
   libtool \
   libz-dev \
   libbz2-dev \
-  libdb++-dev \
   m4 \
   make \
   g++-mingw-w64-x86-64 \
@@ -36,7 +35,7 @@ RUN apt-get update && apt-get -y install \
   zlib1g-dev && \
   add-apt-repository ppa:bitcoin/bitcoin && \
   apt-get update && \
-  apt-get install libdb4.8-dev libdb4.8++-dev && \
+  apt-get install -y libdb4.8-dev libdb4.8++-dev && \
   update-alternatives --config x86_64-w64-mingw32-g++ && \
   curl https://sh.rustup.rs -sSf | \
   sh -s -- --default-toolchain stable -y && \
