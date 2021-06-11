@@ -23,7 +23,7 @@ RUN apt-get update && apt-get -y install \
   libdb++-dev \
   m4 \
   make \
-  mingw-w64\
+  g++-mingw-w64-x86-64 \
   ncurses-dev \
   pkg-config \
   protobuf-compiler \
@@ -37,6 +37,7 @@ RUN apt-get update && apt-get -y install \
   add-apt-repository ppa:bitcoin/bitcoin && \
   apt-get update && \
   apt-get install libdb4.8-dev libdb4.8++-dev && \
+  update-alternatives --config x86_64-w64-mingw32-g++ && \
   curl https://sh.rustup.rs -sSf | \
   sh -s -- --default-toolchain stable -y && \
   rustup update && \
