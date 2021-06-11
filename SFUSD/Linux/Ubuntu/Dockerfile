@@ -22,6 +22,7 @@ RUN apt-get update && \
     libprotobuf-dev \
     protobuf-compiler \
     libqrencode-dev \
+    libboost-all-dev \
     libcurl4-gnutls-dev \
     software-properties-common \
     libgconf-2-4 && \
