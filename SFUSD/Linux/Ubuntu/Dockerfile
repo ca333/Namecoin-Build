@@ -10,7 +10,6 @@ RUN apt-get update && \
     autoconf \
     curl \
     libtool \
-    libdb++-dev \
     make \
     ncurses-dev \
     unzip \
@@ -28,7 +27,7 @@ RUN apt-get update && \
     libgconf-2-4 && \
     add-apt-repository ppa:bitcoin/bitcoin && \
     apt-get update && \
-    apt-get install libdb4.8-dev libdb4.8++-dev && \
+    apt-get install -y libdb4.8-dev libdb4.8++-dev && \
     apt-get -y clean; \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
