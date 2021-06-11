@@ -20,6 +20,7 @@ RUN apt-get update && \
     automake \
     libssl-dev \
     libprotobuf-dev \
+    libevent-dev \
     protobuf-compiler \
     libqrencode-dev \
     libboost-all-dev \
