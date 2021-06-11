@@ -20,6 +20,7 @@ RUN apt-get update && apt-get -y install \
   libtool \
   libz-dev \
   libbz2-dev \
+  libdb++-dev \
   m4 \
   make \
   mingw-w64\
