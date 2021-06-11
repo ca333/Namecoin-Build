@@ -1,5 +1,5 @@
-FROM ubuntu:cosmic
-MAINTAINER Asher Dawes asher.dawes@gmail.com
+FROM ubuntu:bionic
+MAINTAINER Komodo Platform support@komodoplatform.com
 
 ENV PATH=/root/.cargo/bin:$PATH
 
