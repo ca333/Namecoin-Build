@@ -34,6 +34,8 @@ RUN apt-get update && apt-get -y install \
   add-apt-repository ppa:bitcoin/bitcoin && \
   apt-get update && \
   apt-get install -y libdb4.8-dev libdb4.8++-dev && \
+  update-alternatives --install /usr/bin/x86_64-w64-mingw32-g++ x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-win32 60 && \
+  update-alternatives --install /usr/bin/x86_64-w64-mingw32-g++ x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-posix 90 && \
   update-alternatives --config x86_64-w64-mingw32-g++ && \
   apt-get -y autoremove; \
   apt-get -y autoclean; \
