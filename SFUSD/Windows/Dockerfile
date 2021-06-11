@@ -1,8 +1,6 @@
 FROM ubuntu:bionic
 MAINTAINER Komodo Platform support@komodoplatform.com
 
-ENV PATH=/root/.cargo/bin:$PATH
-
 RUN apt-get update && apt-get -y install \
   autoconf \
   automake \
@@ -37,10 +35,6 @@ RUN apt-get update && apt-get -y install \
   apt-get update && \
   apt-get install -y libdb4.8-dev libdb4.8++-dev && \
   update-alternatives --config x86_64-w64-mingw32-g++ && \
-  curl https://sh.rustup.rs -sSf | \
-  sh -s -- --default-toolchain stable -y && \
-  rustup update && \
-  rustup target add x86_64-pc-windows-gnu && \
   apt-get -y autoremove; \
   apt-get -y autoclean; \
   apt-get -y clean && \
